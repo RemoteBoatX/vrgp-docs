@@ -19,3 +19,10 @@ small code samples, the code can directly be embedded into this README file.
 ---
 
 ## 3. Other questions and takeaways
+
+---
+
+## 4. Useful links
+
+- [The OpenDLV framework Github](https://github.com/chalmers-revere/opendlv)
+- [OpenDLV tutorial on Github](https://github.com/chalmers-revere/opendlv-tutorial-kiwi)
