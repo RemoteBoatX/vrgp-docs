@@ -19,3 +19,12 @@ small code samples, the code can directly be embedded into this README file.
 ---
 
 ## 3. Other questions and takeaways
+
+---
+
+## 4. Useful links
+
+- [The official WebRTC spec](https://www.w3.org/TR/webrtc/)
+- [Really comprehensive guide on WebRTC](https://webrtc.github.io/webrtc-org/start/)
+- [How WebRTC works](https://sookocheff.com/post/networking/how-does-web-rtc-work/)
+- [Possible useful Reddit post on WebRTC libraries(?)](https://www.reddit.com/r/WebRTC/comments/fg15bt/c_library/)
