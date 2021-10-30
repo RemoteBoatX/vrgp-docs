@@ -24,8 +24,7 @@ small code samples, the code can directly be embedded into this README file.
 
 ## 4. Useful links
 
-- [The official Web Sockets spec (it gives JavaScript examples, useful to get
-accustomed to it](https://html.spec.whatwg.org/multipage/web-sockets.html)
+- [The official Web Sockets spec](https://html.spec.whatwg.org/multipage/web-sockets.html)(it gives JavaScript examples, useful to get accustomed to it)
 - [C++ websocket client/server library](https://github.com/zaphoyd/websocketpp)(might save us a lot of work, but seems unmaintained)
 - [Useful StackOverflow post on some websockets C/C++ libraries](https://stackoverflow.com/questions/9528811/websocket-client-in-c)(possible
 outcomes from careful read of the post should be noted in this document)
