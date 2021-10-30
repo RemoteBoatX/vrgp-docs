@@ -10,7 +10,7 @@ samples, the code can directly be embedded into this README file.
 
 ---
 
-## 1. Setting up environments
+## 1. Small code examples
 
 ---
 
