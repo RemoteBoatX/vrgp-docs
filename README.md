@@ -34,6 +34,19 @@ Refer to [the docs on Åboat](https://github.com/RemoteBoatX/vrgp-docs/tree/main
 
 Refer to [the docs on MOC](https://github.com/RemoteBoatX/vrgp-docs/tree/main/moc-environment).
 
+## Github workflow
+
+- [Short tutorial on Git and Github](https://rogerdudler.github.io/git-guide/)
+- [Another tutorial on Git and Github](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+- [Git workflows comparisons for projects (important read)](https://www.atlassian.com/git/tutorials/comparing-workflows)
+- [Github Git cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- [Bitbucket Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+- [Gitlab Git cheatsheet](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+- [Boston University Git cheatsheet](https://www.bu.edu/tech/files/2019/06/Git_CheatSheet.pdf)
+
+The team uses Gitflow Workflow as a Github workflow. More info on this can be
+found [here (please read)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+
 ## Scrum/Kanban-style workflow
 
 Refer to [this issue](https://github.com/RemoteBoatX/tasks/issues/8).
