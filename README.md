@@ -53,9 +53,9 @@ This sections documents the use of conventions and standards by the team. Such
 conventions include but are not limited to: code style, documentation style,
 different workflows, different project management techniques.
 
----
-
 ### General project workflows
+
+---
 
 #### Github workflow
 
@@ -70,6 +70,8 @@ different workflows, different project management techniques.
 The team uses Gitflow Workflow as a Github workflow. More info on this can be
 found [here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
+---
+
 #### Scrum/Kanban-style workflow
 
 Refer to [this issue](https://github.com/RemoteBoatX/tasks/issues/8).
@@ -81,6 +83,8 @@ The product is continuously delivered and changes are continuously integrated,
 with the product always being available.
 
 ### Coding related conventions
+
+---
 
 #### Code style
 
@@ -97,6 +101,8 @@ additionaly helps.
 Additional C++ core guidelines can be found [here](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) (altough a lengthy
 document).
 
+---
+
 #### Comments and code documentation
 
 Code should be commented and documented using [Doxygen](https://www.doxygen.nl/index.html).
@@ -106,16 +112,20 @@ For installation and getting started in Doxygen, see [this](https://www.doxygen.
 The documentation should also be generated at commit-time, using the CI/CD
 pipeline.
 
+---
+
 #### Testing
 
 [TODO]
+
+---
 
 ### Building
 
 The project should be built using [CMake](https://cmake.org/).
 
 Some tutorials on CMake:
-- [CMake-tutorial](https://github.com/pyk/cmake-tutorial).
+- [CMake-tutorial](https://github.com/pyk/cmake-tutorial)
 - [A CMake tutorial on medium.com](https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b)
 - [A quick CMake tutorial by JetBrains](https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html)
 - [A quite comprehensive CMake tutorial](https://riptutorial.com/cmake)
@@ -123,6 +133,8 @@ Some tutorials on CMake:
 The CI/CD pipeline should have a rule for building the project and deploying a
 zip archive or executable file(s), or other possible artifacts such as Docker
 images.
+
+---
 
 ### Other CI/CD pipeline tools
 
