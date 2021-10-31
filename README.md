@@ -53,9 +53,9 @@ This sections documents the use of conventions and standards by the team. Such
 conventions include but are not limited to: code style, documentation style,
 different workflows, different project management techniques.
 
-### General project workflows
-
 ---
+
+### General project workflows
 
 #### Github workflow
 
@@ -70,8 +70,6 @@ different workflows, different project management techniques.
 The team uses Gitflow Workflow as a Github workflow. More info on this can be
 found [here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
----
-
 #### Scrum/Kanban-style workflow
 
 Refer to [this issue](https://github.com/RemoteBoatX/tasks/issues/8).
@@ -82,9 +80,9 @@ sprints, at the end of which we come together and see the progress being made.
 The product is continuously delivered and changes are continuously integrated,
 with the product always being available.
 
-### Coding related conventions
-
 ---
+
+### Coding related conventions
 
 #### Code style
 
@@ -100,8 +98,6 @@ additionaly helps.
 
 Additional C++ core guidelines can be found [here](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) (altough a lengthy
 document).
-
----
 
 #### Comments and code documentation
 
