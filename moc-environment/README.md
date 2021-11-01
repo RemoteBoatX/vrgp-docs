@@ -32,6 +32,13 @@ and extracting the zip archive), the dependencies can be installed by running
 `npm install` in all the repositories. The server can be started by running
 `node server.js` in `vrgp-spinache`.
 
+**NOTE:** To be able to run this with the web interface (i.e. `vrgp-doryphore`),
+you need to link to that project. This basically means locating the Doryphore
+directory, and doing (in Linux) `ln -s </absolute/path/to/doryphore>/dist
+<path/to/spinache>/apps/operator`. This makes it so the Spinache based HAPI
+application will run the `index.html` file located in the Doryphore repository
+when running in the browser.
+
 ### vrgp-doryphore
 
 The structure of the repository:
