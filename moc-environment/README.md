@@ -61,7 +61,7 @@ The structure of the repository:
 Not much to say about this, this is just the frontend of the Spinache-based MOC.
 There are instructions on how to use this on the [official Doryphore Github
 page](https://github.com/aboamare/vrgp-doryphore). Basically, all that needs to be done is `npm install`, followed by `npm
-run build` after every modification in the repo. The second step will generate a
+run build` after **every modification** in the repo. The second step will generate a
 `dist` folder (this needs to be linked to, check the [vrgp-spinache](#vrgp-spinache) section).
 There is an important note down below though, so read on!
 
