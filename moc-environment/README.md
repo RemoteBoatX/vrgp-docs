@@ -18,6 +18,8 @@ different goal. The repositories are:
 - [vrgp-doryphore](https://github.com/aboamare/vrgp-doryphore): A web interface for the vrgp-spinache MOC.
 - [vrgp-teapilot](https://github.com/aboamare/vrgp-teapilot): A phone test implementation of the vessel side of the VRGP.
 
+### vrgp-spinache
+
 `vrgp-spinache` is based on the [HAPI framework](https://hapi.dev/). A short tutorial to get
 started with HAPI can be found [here](https://hapi.dev/tutorials?lang=en_US).
 
@@ -29,6 +31,49 @@ After downloading them locally (either using `git clone` or manually downloading
 and extracting the zip archive), the dependencies can be installed by running
 `npm install` in all the repositories. The server can be started by running
 `node server.js` in `vrgp-spinache`.
+
+### vrgp-doryphore
+
+The structure of the repository:
+<pre>
+.
+├─src
+│ ├── App.vue
+│ ├── assets
+│ │   └── logo.png
+│ ├── components
+│ │   ├── icon.vue
+│ │   └── Vessel.vue
+│ ├── index.css
+│ └── main.js
+├index.html
+├package.json
+└...
+</pre>
+
+Not much to say about this, this is just the frontend of the Spinache-based MOC.
+There are instructions on how to use this on the [official Doryphore Github
+page](https://github.com/aboamare/vrgp-doryphore). Basically, all that needs to be done is `npm install`, followed by `npm
+run build` after every modification in the repo. The second step will generate a
+`dist` folder (this needs to be linked to, check the [vrgp-spinache](#vrgp-spinache) section).
+There is an important note down below though, so read on!
+
+The app is [Vue](https://vuejs.org/)-based. There is nothing really important about this.
+
+Important files in the application folder are:
+- `src/App.vue`: This is the main template file. What this means is that it
+  contains both html and javascript code. This is what will be inserted as an
+  html page in the browser. The file contains most of the logic of the
+  web app.
+- `src/main.js`: The main application file that launches Vue. Nothing too important.
+- `index.html`: This is just some basic setup that imports `src/main.js`, which
+  in turn imports `src/App.vue`. This file is automatically loaded by
+  `vrgp-spinache` when going to the web page `localhost:3001/operator/`.
+- `package.json`: describes the dependencies of the project. **NOTE:** in the
+  file, there is `vrgp-spinache-lib` as a dependency. You should change this to
+  wherever you have it installed in your path *before* running `npm install`. If
+  you already ran that, completely delete the `node_modules` folder and do the
+  steps above.
 
 ---
 
