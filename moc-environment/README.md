@@ -157,6 +157,22 @@ Important files in the application folder are:
 
 ## 2. Problems with the environment/code
 
+There is no consistency within the repositories. It seems there are duplicate
+files in separate repositories, and some files need to be copied in different
+places for the whole thing to work.
+
+There are numerous hardcoded things in the application. This is not easy to work
+around.
+
+There are no comments at all, hard to understand what each file is supposed to
+do. We're basically doing a guessing game.
+
 ---
 
 ## 3. Other questions and takeaways
+
+We will probably end up reimplementing the whole thing, since we need a test
+environment anyway. Since the MOC server is not fully implemented anyway, we
+would need to work with the above inconsistencies and problems. Rather, we
+should write the MOC server from scratch, more so in the form of an REST API,
+with a possible (but unlikely) web interface.
