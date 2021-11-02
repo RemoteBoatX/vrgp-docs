@@ -20,6 +20,32 @@ different goal. The repositories are:
 
 ### vrgp-spinache
 
+The structure of the repository:
+<pre>
+.
+├─ apps
+│  ├── moc.html
+│  ├── moc.js
+│  ├── operator -> ../../Doryphore/dist (the link to the doryphore app, see below)
+│  ├── operator.js
+│  ├── rtc-test.html
+│  ├── rtc-test.js
+│  ├── tests
+│  │   └── NMEA-sentences.js
+│  └── vessel.html
+├──lib
+│  ├── conning.js
+│  ├── iceservers.js
+│  └── peer.js
+├── server.js
+├── moc.js
+├── operators.js
+├── vessels.js
+├── invalid-nmea-sentences.txt
+├── package.json
+└── ...
+</pre>
+
 `vrgp-spinache` is based on the [HAPI framework](https://hapi.dev/). A short tutorial to get
 started with HAPI can be found [here](https://hapi.dev/tutorials?lang=en_US).
 
@@ -53,9 +79,9 @@ The structure of the repository:
 │ │   └── Vessel.vue
 │ ├── index.css
 │ └── main.js
-├index.html
-├package.json
-└...
+├── index.html
+├── package.json
+└── ...
 </pre>
 
 Not much to say about this, this is just the frontend of the Spinache-based MOC.
