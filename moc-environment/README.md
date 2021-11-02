@@ -65,6 +65,44 @@ directory, and doing (in Linux) `ln -s </absolute/path/to/doryphore>/dist
 application will run the `index.html` file located in the Doryphore repository
 when running in the browser.
 
+### vrgp-spinache-lib
+
+The structure of the repository:
+<pre>
+.
+├── index.js
+├── package.json
+├── peer.js
+├── README.md
+├── tests
+│   └── NMEA-sentences.js
+└── vessel.js
+</pre>
+
+To get the server running, some file contents need to be copied into the
+`vrgp-spinache` repository.
+
+The modifications are:
+- comment line 12 in the file `<spinache>/apps/vessel.html` (the one importing
+  `VesselInterface`)
+- copy the contents of the file `<spinache-lib>/vessel.js`, *except* for the
+  very first and the very last lines (the ones that say `import ...` and `export
+  ...`) into the above file, below the commented line.
+- copy the contents of the file `<spinache-lib>/peer.js` below the commented
+  line from point 1 (so basically above the code pasted from step 2)
+
+This should bring everything needed into the file `vessel.html`. Now going in
+the browser to `localhost:3001/vessel.html` should display a page which asks for
+a vessel name and a `contact MOC` button. After pressing connect, the vessel
+will connect to the local MOC server (the vessel is a mock-up). To observe
+this, open another browser page pointing to `localhost:3001/operator`.
+
+Important files in the application folder are:
+- `peer.js`: This file is used by the Doryphore web interface.
+- `vessel.js`: This file is used by the Spinache web application.
+- `tests/NMEA-sentences.js`: Also used by the Spinache web application. This is
+  duplicated however in the structure of the Spinache repository.
+
 ### vrgp-doryphore
 
 The structure of the repository:
