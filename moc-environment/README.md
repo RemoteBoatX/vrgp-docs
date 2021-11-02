@@ -65,6 +65,13 @@ directory, and doing (in Linux) `ln -s </absolute/path/to/doryphore>/dist
 application will run the `index.html` file located in the Doryphore repository
 when running in the browser.
 
+Important files in the application folder are:
+- `server.js`: The starting point of the application. The application itself can
+  be run by `node server.js`. The file only contains some setup code. The other
+  important bits of the code are either in the `apps` directory, or in the `lib`
+  directory (which confusingly enough is *not* part of `vrgp-spinache-lib`).
+- `package.json`: describes the dependencies of the project.
+
 ### vrgp-spinache-lib
 
 The structure of the repository:
@@ -87,7 +94,7 @@ The modifications are:
   `VesselInterface`)
 - copy the contents of the file `<spinache-lib>/vessel.js`, *except* for the
   very first and the very last lines (the ones that say `import ...` and `export
-  ...`) into the above file, below the commented line.
+  ...`) into the above file, below the commented line
 - copy the contents of the file `<spinache-lib>/peer.js` below the commented
   line from point 1 (so basically above the code pasted from step 2)
 
