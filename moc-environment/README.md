@@ -60,8 +60,8 @@ and extracting the zip archive), the dependencies can be installed by running
 
 **NOTE:** To be able to run this with the web interface (i.e. `vrgp-doryphore`),
 you need to link to that project. This basically means locating the Doryphore
-directory, and doing (in Linux) `ln -s </absolute/path/to/doryphore>/dist
-<path/to/spinache>/apps/operator`. This makes it so the Spinache based HAPI
+directory, and doing in Linux `ln -s </absolute/path/to/doryphore>/dist
+<path/to/spinache>/apps/operator` and in Windows `mklink /D <path/to/spinache>/apps/operator </absolute/path/to/doryphore>/dist`. This makes it so the Spinache based HAPI
 application will run the `index.html` file located in the Doryphore repository
 when running in the browser.
 
