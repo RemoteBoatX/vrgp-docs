@@ -12,6 +12,8 @@ small code samples, the code can directly be embedded into this README file.
 
 ## 1. Small code examples
 
+A minimal sample implementation of a WebSocket server and client in JavaScript can be found [here](https://github.com/RemoteBoatX/test-websocket-webrtc/tree/main/websocket).
+
 ---
 
 ## 2. Problems with WebSockets and how we solved them
