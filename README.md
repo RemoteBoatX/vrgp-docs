@@ -47,6 +47,10 @@ Refer to [the docs on Åboat](https://github.com/RemoteBoatX/vrgp-docs/tree/main
 
 Refer to [the docs on MOC](https://github.com/RemoteBoatX/vrgp-docs/tree/main/moc-environment).
 
+### Pipeline and build
+
+Refer to [the docs on Pipeline](https://github.com/RemoteBoatX/vrgp-docs/tree/main/pipeline).
+
 ## External documentation, standards, conventions, workflows
 
 This sections documents the use of conventions and standards by the team. Such
