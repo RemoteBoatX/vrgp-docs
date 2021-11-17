@@ -1,0 +1,9 @@
+\section{Architecture}\label{sec:architecture}
+
+The Åboat already has an architecture of its own. The system is already functional (though it has its own communication protocol). What we aim to do is build on top of this architecture.
+
+Currently, the Åboat has an architecture that consists of microservices. Each of these microservices runs a different “functionality” of the boat. There are microservices for sensors, control, storage, and communication. The current picture of the Åboat architecture can be seen in the image below. Our microservice, the one implementing the VRGP specification and responsible for message exchange with a MOC on the shore, will probably be connected to every other microservice on the boat - especially important are the sensor microservices. As such, the microservice will play an essential role in the architecture of the Åboat.
+
+Note however, that our microservice will not replace existing communication microservices, but will instead run along with them.
+
+The microservice will consist of two high level-view modules: one module will be a generic VRGP implementation (not Åboat related), which will take care of the communication with the MOC on the shore, and one module will be in charge of talking with the other microservices on the boat that provide sensor data. The role of the first module will be that of a communicator, while the role of the second module will thus be that of a data aggregator.

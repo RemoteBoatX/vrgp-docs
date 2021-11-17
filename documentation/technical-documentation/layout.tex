@@ -1,0 +1,28 @@
+% Page layout
+\geometry{
+	bottom=3.5cm,
+	headheight=180pt
+}
+
+% Nummerierung der ersten Seiten verhindern
+\pagenumbering{gobble}
+
+% Bibstyle
+\bibliographystyle{plain}
+
+% Header / Footer
+\fancypagestyle{plain}{
+	\fancyhf{}% Clear header/footer
+	\fancyhead[R]{\includegraphics[width=4cm]{img/cau-logo-2017}} % Rechter header
+	\fancyhead[L]{\leftmark} % Linker header
+	\fancyfoot[R]{\thepage} % Rechter footer
+}
+\pagestyle{plain}
+
+\renewcommand{\headrulewidth}{0.5pt} % Unnötige Informationen der Kapitelangabe
+\renewcommand{\footrulewidth}{0.2pt} % entfernen
+\renewcommand{\chaptermark}[1]{\markboth{{#1}}{}}
+
+% Zahlen für Fußnoten
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
