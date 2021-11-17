@@ -1,0 +1,71 @@
+\section{Product vision statement}\label{sec:vision}
+
+Our vision is to provide software that ensures the safe navigation of possibly autonomous ships by implementing the vessel side of the Vessel Remote Guidance Protocol (VRGP). We aim to show that the protocol works by providing a prototype implementation for the Åboat with a generic core implementation of the protocol that can be used as a starting point for real-world implementations.
+\\\\
+The goal of the VRGP protocol is for vessels to securely communicate in real-time with on-shore maritime operating centers (MOC) which can provide guidance, e.g. for docking vessels. Ultimately, this would avoid putting lives in danger when docking vessels as the physical presence on-board would become unnecessary. The protocol allows access to key sensors and even video data on vessels to provide MOCs with relevant up-to-date information.
+\\\\
+We envision future use of the protocol for autonomous boats. Via the protocol, they could receive guidance from different MOCs along the way from one harbour to another. The protocol is specified such that only requested information is sent over the network. This would reduce network latency and bandwidth consumption.
+\\\\
+As this is supposed to include a standard implementation of the protocol, shipping companies will need to adjust it to real-world applications. With that in mind, this implementation has to be easily integratable into already running systems.
+
+\section{Project deliverables}\label{sec:deliverables}
+
+The deliverables specific to this project are:
+
+\begin{itemize}
+	\item A Docker container with an OpenDLV microservice implementing the vessel-side of the VRGP for the Åboat
+	\item An extension of the Åboat user interface to control parts of the VRGP implementation
+	\item Improved testing environment, especially including a test implementation of an MOC
+	\item Protocol specification contributions
+\end{itemize}
+
+\noindent
+The additional deliverables required by the course are:
+
+\begin{itemize}
+	\item Project plan
+	\item Technical documentation
+	\item Prototype
+	\item User guide
+	\item Business plan
+	\item Poster
+	\item Retrospective analysis
+	\item Source code
+\end{itemize}
+
+\section{Budget and resources}\label{sec:budget}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{ l l X }
+		\textbf{Resource} & \textbf{Budget} & \textbf{Description} \\
+		\rowcolor[HTML]{C0C0C0}
+		\textbf{Hardware} & & \\
+		Laptops and computers & €0 & Our own \\
+		\rowcolor[HTML]{E7E7E7}
+		ICE servers (hosting) & €3-5 per month & Optional/provided by client \\
+		Raspberry Pi & €0 & Provided by client \\
+		\rowcolor[HTML]{C0C0C0}
+		\textbf{Software and tools} & & \\
+		GitHub & €0 & Open-source \\
+		\rowcolor[HTML]{E7E7E7}
+		JavaScript & €0 & Free \\
+		C++ & €0 & Free \\
+		\rowcolor[HTML]{E7E7E7}
+		OpenDLV & €0 & Open-source \\
+		Postman & €0 & Free \\
+		\rowcolor[HTML]{E7E7E7}
+		Microsoft Office & €0 & Provided by university \\
+		Zoom & €0 & Provided by university \\
+		\rowcolor[HTML]{E7E7E7}
+		Discord & €0 & Free \\
+		\rowcolor[HTML]{C0C0C0}
+		\textbf{Additional tools} & & \\
+		Human resources & €0 & No wages \\
+		\rowcolor[HTML]{E7E7E7}
+		Workspace & €0 & Provided by university \\
+		\rowcolor[HTML]{C0C0C0}
+		\textbf{Overall budget} & €3-5 per month & \\
+	\end{tabularx}
+	\label{table:f-req-1}
+\end{table}

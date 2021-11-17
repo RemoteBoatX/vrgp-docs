@@ -1,0 +1,130 @@
+\documentclass[hidelinks]{report}
+
+\usepackage[utf8]{inputenc} % Character encoding
+\usepackage[english]{babel} % Language
+
+\usepackage[table,xcdraw]{xcolor} % Table colors
+\usepackage{tabularx} % Dynamic table width
+\usepackage{tcolorbox} % Gray boxes
+\usepackage{hyperref} % URL environment
+\usepackage{todonotes} % Notes
+\usepackage{natbib} % Bibliography
+\usepackage{fancyhdr} % Header and footer
+\usepackage{multirow} % Multirow
+\usepackage{geometry} % Page layout
+\usepackage{color} % Text colors
+\usepackage{float} % Show tables within their section
+\usepackage{listings} % Code
+\usepackage{pdflscape} % Horizontal orientation (landscape)
+\usepackage{enumerate} % Custom enumerators
+
+% Command for inline code
+\newcommand{\code}[1]{\lstinline[language=json,columns=fixed,breakatwhitespace]{#1}}
+
+% Commands for requirements priorities
+\newcommand{\priohigh}{1 - high}
+\newcommand{\prioavg}{2 - average}
+\newcommand{\priolow}{3 - low}
+\newcommand{\prioopt}{4 - optional}
+
+% JSON display
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+% Cucumber.
+\lstdefinelanguage{Gherkin}{
+  keywords={When, Then, Given, And},
+  ndkeywords={Feature, Scenario},
+  sensitive=true,
+  comment=[l]{!--},
+  morestring=[b]"
+}
+
+% Configure page layout
+\input{layout.tex}
+
+% Title page
+\input{doc-info.tex}
+\input{title.tex}
+
+% Document
+
+\begin{document}
+	\maketitle
+	
+	\chapter*{Revision history}
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabularx}{\textwidth}{ l c X }
+			\rowcolor[HTML]{C0C0C0}
+			\textbf{Date} & \textbf{Version} & \textbf{Description} \\
+			07.10.2021 & 1.0   & Initial version \\
+			\rowcolor[HTML]{E7E7E7}
+			21.10.2021 & 1.1   & Roles refinement, schedule update \\
+			26.10.2021 & 1.2.1 & Update resources and budget \\
+			\rowcolor[HTML]{E7E7E7}
+			26.10.2021 & 1.2.2 & Update schedule \\
+			29.10.2021 & 1.2.3 & Update project organisation: Add developer role \\
+			\rowcolor[HTML]{E7E7E7}
+			05.11.2021 & 1.3   & Make changes according to feedback session \\
+			07.11.2021 & 1.4   & Update activities chapter and refine project vision \\
+			\rowcolor[HTML]{E7E7E7}
+			17.11.2021 & 1.5   & Translation to LaTeX \\
+		\end{tabularx}
+	\end{table}
+	
+	\tableofcontents
+	
+	\chapter{Project overview}\label{chp:overview}
+	\pagenumbering{arabic} % Start page numbering.
+	\thispagestyle{fancy}
+	\input{chp/overview}
+	
+	\chapter{Project organisation}\label{chp:organisation}
+	\thispagestyle{fancy}
+	\input{chp/organisation}
+	
+	\chapter{Activities and milestones}\label{chp:activities}
+	\thispagestyle{fancy}
+	\input{chp/activities}
+	
+	\chapter{Risks}\label{chp:risks}
+	\thispagestyle{fancy}
+	\input{chp/risks}
+	
+	\chapter{Tracking}\label{chp:tracking}
+	\thispagestyle{fancy}
+	\input{chp/tracking}
+\end{document}
