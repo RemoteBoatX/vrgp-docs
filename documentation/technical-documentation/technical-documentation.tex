@@ -20,6 +20,12 @@
 % Command for inline code
 \newcommand{\code}[1]{\lstinline[language=json,columns=fixed,breakatwhitespace]{#1}}
 
+% Commands for requirements priorities
+\newcommand{\priohigh}{1 - high}
+\newcommand{\prioavg}{2 - average}
+\newcommand{\priolow}{3 - low}
+\newcommand{\prioopt}{4 - optional}
+
 % JSON display
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
@@ -75,6 +81,21 @@
 
 \begin{document}
 	\maketitle
+	
+	\chapter*{Revision history}
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabularx}{\textwidth}{ l c X }
+			\rowcolor[HTML]{C0C0C0}
+			\textbf{Date} & \textbf{Version} & \textbf{Description} \\
+			20.10.2021 & 1.0 & Initial version \\
+			\rowcolor[HTML]{E7E7E7}
+			11.11.2021 & 2.0 & Initial design \\
+			17.11.2021 & 2.1 & Translation to LaTeX \\
+		\end{tabularx}
+	\end{table}
+	
 	\tableofcontents
 	
 	\chapter{Product Requirements}\label{chp:requirements}
