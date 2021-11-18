@@ -57,6 +57,11 @@ message MyMessage1 [id = 123] {
   Cluon to pass the messages around. See the tutorial above for full
   instructions on how to do this.
 
+OpenDLV additionally implements some microservices for some sensors already
+(i.e. gets their data, and using Cluon, broadcasts them to listening parties).
+
+This is what Åboat is currently doing.
+
 ---
 
 ## 4. Useful links
