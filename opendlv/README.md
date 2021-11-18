@@ -36,7 +36,8 @@ address and number, and all the microservices in a specific group will get the
 message, but only the interested microservice will listen for the message and
 actually do something with that (the low-level stuff is taken care of by Cluon).
 The default UDP port used is `224.0.0.{CID}`, where `CID` is the ID of the OD4
-group.
+group. This shouldn't really be of any interest, since Cluon already takes care
+of the low-level stuff for us.
 
 Messages that are sent to each other are encoded in a `odvd`-type message. How
 this works is:
