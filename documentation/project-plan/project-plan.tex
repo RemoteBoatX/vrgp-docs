@@ -72,7 +72,7 @@
 }
 
 % Configure page layout
-\input{layout.tex}
+\input{../common/layout.tex}
 
 % Title page
 \input{doc-info.tex}
@@ -82,9 +82,9 @@
 
 \begin{document}
 	\maketitle
-	
+
 	\chapter*{Revision history}
-	
+
 	\begin{table}[H]
 		\centering
 		\begin{tabularx}{\textwidth}{ l c X }
@@ -104,26 +104,26 @@
 			17.11.2021 & 1.5   & Translation to LaTeX \\
 		\end{tabularx}
 	\end{table}
-	
+
 	\tableofcontents
-	
+
 	\chapter{Project overview}\label{chp:overview}
 	\pagenumbering{arabic} % Start page numbering.
 	\thispagestyle{fancy}
 	\input{chapters/overview}
-	
+
 	\chapter{Project organisation}\label{chp:organisation}
 	\thispagestyle{fancy}
 	\input{chapters/organisation}
-	
+
 	\chapter{Activities and milestones}\label{chp:activities}
 	\thispagestyle{fancy}
 	\input{chapters/activities}
-	
+
 	\chapter{Risks}\label{chp:risks}
 	\thispagestyle{fancy}
 	\input{chapters/risks}
-	
+
 	\chapter{Tracking}\label{chp:tracking}
 	\thispagestyle{fancy}
 	\input{chapters/tracking}
