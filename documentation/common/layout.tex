@@ -1,0 +1,29 @@
+% Page layout
+\geometry{
+	bottom=3.5cm,
+	headheight=180pt
+}
+
+% Prevent numbering of first pages.
+\pagenumbering{gobble}
+
+% Bibstyle
+\bibliographystyle{plain}
+
+% Header/footer
+\fancypagestyle{plain}{
+	\fancyhf{}% Clear header/footer
+	\fancyhead[R]{\includegraphics[width=4cm]{../common/images/aa-logo}} % Right header
+	\fancyhead[L]{\leftmark} % Left header
+	\fancyfoot[R]{\thepage} % Right footer
+}
+\pagestyle{plain}
+
+% Remove Unnecessary chapter information
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\renewcommand{\chaptermark}[1]{\markboth{{#1}}{}}
+
+% Numbers for footnotes
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
