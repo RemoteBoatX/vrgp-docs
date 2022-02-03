@@ -2,11 +2,7 @@
 
 The Åboat already has an architecture of its own. The system is already functional (though it has its own communication protocol). What we aim to do is build on top of this architecture.
 \\\\
-Currently, the Åboat has an architecture that consists of microservices. Each of these microservices runs a different “functionality” of the boat. There are microservices for sensors, control, storage, and communication. The current picture of the Åboat architecture can be seen in the image below. Our microservice, the one implementing the VRGP specification and responsible for message exchange with a MOC on the shore, will probably be connected to every other microservice on the boat - especially important are the sensor microservices. As such, the microservice will play an essential role in the architecture of the Åboat.
-\\\\
-Note however, that our microservice will not replace existing communication microservices, but will instead run along with them.
-\\\\
-The microservice will consist of two high level-view modules: one module will be a generic VRGP implementation (not Åboat related), which will take care of the communication with the MOC on the shore, and one module will be in charge of talking with the other microservices on the boat that provide sensor data. The role of the first module will be that of a communicator, while the role of the second module will thus be that of a data aggregator.
+Currently, the Åboat has an architecture that consists of microservices. Each of these microservices runs a different “functionality” of the boat. There are microservices for sensors, control, storage, and communication. The current picture of the Åboat architecture can be seen in the image below.
 
 \begin{figure}[ht]
 	\centering
@@ -15,15 +11,32 @@ The microservice will consist of two high level-view modules: one module will be
 	\label{fig:aboat-architecture}
 \end{figure}
 
+The purpose of the VRGP implementation is to create an independent system implementing the VRGP specification, which will interface with the existing architecture of the Åboat. The interfacing will be achieved through a microservice (called an \textbf{adapter}), which has the sole purpose of translating the calls between the Åboat and the VRGP service. This will make the VRGP service completely independent of the vessel that uses it, thus achieving a good level of decoupling.
+\\\\
+Using the VRGP service with other boats would then be easy, as the only component that would have to be rewritten would be the \textbf{adapter}, which, as mentioned above, is only a small layer that interfaces between the vessel and VRGP service.
+\\\\
+On the shore-side, there is the MOC service, which consists of a backend and frontend. The backend is responsible for the communication with the vessel-side (more specifically, the VRGP service), while the frontend is responsible for displaying the information to (most likely) human operators.
+\\\\
+An image of the current architecture of the VRGP implementation can be seen below.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{images/vrgp-architecture}
+	\caption{VRGP architecture}
+	\label{fig:vrgp-architecture}
+\end{figure}
+
+More details about the components are presented in the implementation section below (section \ref{sec:technologies}).
+
 \section{Design}\label{sec:design}
 
-In the following sections, we describe our initial design using several UML diagrams. UML is used for most parts of the design for now, as it provides a well-known, easy to understand and somewhat unambiguous description of the design. For now, the diagrams depict rather high-level views of the system. In further design steps, the diagrams will be refined and more specific diagram types will be added to the design. Before entering the next refinement stage, the design is always presented to and agreed upon with the customers.
+In the following sections, we describe our current design using several UML diagrams. UML is used for most parts of the design for now, as it provides a well-known, easy to understand and somewhat unambiguous description of the design. Some of the diagrams present the high-level views of the system, while others are more in-depth.
 
 \subsection{Static Design}
 
 \subsubsection{Deployment Diagram}
 
-The deployment diagram provides an overview of the different deliverables for this software project and in which environments they can be used. The most important artifact to be delivered is the OpenDLV microservice for the Åboat which is embedded in the Åboat environment. Additionally, an MOC example implementation will be developed to test the VRGP implementation for the Åboat. This consists of a backend and a frontend to make testing easy for us and future users.
+The deployment diagram provides an overview of the different deliverables for this software project and in which environments they can be used. The most important artifact to be delivered is the VRGP service (which is the actual VRGP implementation), while the other deliverables (the OpenDLV adapter, the MOC backend and frontend) are mostly built around the service and aim to show that it works. The deployment diagram is shown in figure \ref{fig:deployment-diagram}.
 
 \begin{figure}[ht]
 	\centering
@@ -32,15 +45,45 @@ The deployment diagram provides an overview of the different deliverables for th
 	\label{fig:deployment-diagram}
 \end{figure}
 
-\subsubsection{Component Diagram}
+\subsubsection{Component Diagrams}
 
-The next step in the design process will be the development of a component diagram for our software. This will divide the software into components, somewhat according to the use cases and requirements (see \ref{sec:func-requirements}), and define which components communicate with each other in what form. The component diagram will be the basis for further, more detailed design steps such as class diagrams.
+The high-level components have been briefly described in the introduction above.
+\\\\
+The most important part of the communication happens between the vessel-side and the shore-side, i.e. between the VRGP service and the MOC. A diagram illustrating this connection can be seen in figure \ref{fig:vrgp-moc-component-diagram}.
+\\\\
+As can be seen, the component diagram mostly follows the requirements outlined above (\ref{sec:func-requirements}).
+\\\\
+Another important part of the communication happens between the VRGP service and the adapter microservice. The communication can be seen in figure \ref{fig:adapter-vrgp-component-diagram}.
+\\\\
+The left side depicts the OpenDLV microservice running the adapter, which will have further communications with the other Åboat microservices.
+
+\begin{landscape}
+
+\begin{figure}[!p]
+	\centering
+	\includegraphics[width=\linewidth]{diagrams/ComponentDiagram_GenericVrgpMicroservice_HandlerView}
+	\caption{VRGP service - MOC component diagram}
+	\label{fig:vrgp-moc-component-diagram}
+\end{figure}
+
+\end{landscape}
+
+\begin{landscape}
+
+\begin{figure}[!p]
+	\centering
+	\includegraphics[width=\linewidth]{diagrams/components_adapter}
+	\caption{Åboat adapter - VRGP service component diagram}
+	\label{fig:adapter-vrgp-component-diagram}
+\end{figure}
+
+\end{landscape}
 
 \subsection{Dynamic Design}\label{sec:dynamic-design}
 
 \subsubsection{Activity Diagram}
 
-This high-level activity diagram provides an overview of the general communication flow in the VRGP protocol, including the connection establishment and authentication, the messages that can be sent continuously while the connection is up and the termination of the connection. In further steps, this diagram will either be refined to account for more details of the protocol or split into multiple activity diagrams to depict the different processes in more detail.
+This high-level activity diagram (figure \ref{fig:activity-diagram}) provides an overview of the general communication flow in the VRGP protocol, including the connection establishment and authentication, the messages that can be sent continuously while the connection is up and the termination of the connection. In further steps, this diagram will either be refined to account for more details of the protocol or split into multiple activity diagrams to depict the different processes in more detail.
 
 \begin{figure}[ht]
 	\centering

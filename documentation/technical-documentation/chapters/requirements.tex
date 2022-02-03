@@ -2,7 +2,7 @@ The purpose of the VRGP is to provide a standardized way of communication for ve
 \\\\
 The VRGP implementation will provide the Åboat with the functionality described in the protocol specification, an interface for communication with a MOC. This includes initiating and creating a connection with a MOC, streaming on-board information upon request, terminating a connection, sending notification about abnormal situations on board and receiving guidance from the MOC. The VRGP implementation will be integrated into the existing Åboat architecture and connect with its user interface.
 \\\\
-The implementation can also be used as a starting point for other implementations. Parts of it will be reusable and the core implementation may even be an independent component to be used by other vessels than the Åboat.
+The implementation can also be used as a starting point for other implementations. Parts of it are reusable and the core implementation is an independent component that can be used by other vessels than the Åboat. Only a small layer (called an adapter) is needed to interface the core implementation with any vessel.
 
 \section{Functional Requirements}\label{sec:func-requirements}
 
@@ -587,7 +587,9 @@ The implementation can also be used as a starting point for other implementation
 
 \subsection{Guidance}
 
-\todo{Add requirements for guidance.}
+% \todo{Add requirements for guidance.}
+The guidance requirements are incomplete, as the specification does not yet have 
+Currently, the specification does not state anything on the guidance part, and as such the guidance section is empty. With further specification revisions on this topic, there will be additional requirements here.
 
 \section{User Interface Requirements}\label{sec:ui-requirements}
 
