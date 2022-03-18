@@ -68,7 +68,7 @@ The MOC frontend is responsible for displaying the information from the MOC back
 
 The VRGP adapter's role is to translate calls between the Åboat and the VRGP service. This is needed because the Åboat already has an existing architecture. Thus it is not possible to integrate the VRGP service directly into its architecture in an easy way. More generally, the service shouldn't be separately built for every different vessel, but rather should be built independently of each vessel, and then \textbf{adapted} accordingly. The role of the adapter is then that of a "translator", to integrate itself into existing architectures and establish a channel between vessels and the VRGP service. Such an adapter is easy to build, and only requires minimal work to be done.
 \\\\
-Of course, a vessel can be built around the VRGP service itself, in which case there would be no need for an adapter at all. The adapter itself is a way to provide backwards-compatibility, or to give a vessel the possibility to have more than one protocol through which to communicate.
+Of course, a vessel's software can be built around the VRGP service itself, in which case there would be no need for an adapter at all. The adapter itself is a way to provide backwards-compatibility, or to give a vessel the possibility to have more than one protocol through which to communicate.
 \\\\
 The adapter class diagram can be seen in figure \ref{fig:adapter-class-diagram}.
 
