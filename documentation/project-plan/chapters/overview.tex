@@ -13,9 +13,10 @@ As this is supposed to include a standard implementation of the protocol, shippi
 The deliverables specific to this project are:
 
 \begin{itemize}
-	\item A Docker container with an OpenDLV microservice implementing the vessel-side of the VRGP for the Åboat
-	\item An extension of the Åboat user interface to control parts of the VRGP implementation
-	\item Improved testing environment, especially including a test implementation of an MOC
+	\item A Docker container running the generic VRGP vessel-side core implementation
+	\item A Docker container running an OpenDLV microservice implementing the adapter to the generic VRGP service
+	\item A testing MOC environment, used to simulate a real on-shore operating center
+	\item A frontend capable of emulating an MOC remote operating center, with access to visualization of sensors, as well as remote control of the boat
 	\item Protocol specification contributions
 \end{itemize}
 
@@ -47,9 +48,10 @@ The additional deliverables required by the course are:
 		Raspberry Pi & €0 & Provided by client \\
 		\rowcolor[HTML]{C0C0C0}
 		\textbf{Software and tools} & & \\
-		GitHub & €0 & Open-source \\
+		GitHub & €0 & Free \\
 		\rowcolor[HTML]{E7E7E7}
 		JavaScript & €0 & Free \\
+        Java & €0 & Free \\
 		C++ & €0 & Free \\
 		\rowcolor[HTML]{E7E7E7}
 		OpenDLV & €0 & Open-source \\

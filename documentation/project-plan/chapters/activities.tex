@@ -10,15 +10,15 @@ A minimal proof of concept for the VRGP protocol also already exists in the form
 
 \subsection{Requirement analysis}\label{sec:requirements}
 
-In the initial phase of the project, we will be in regular and close contact to our customers to acquire a thorough understanding of the requirements and to formulate these initial requirements as the basic pillar for the design of the system. These requirements will be continuously reassessed and refined over the course of the project.
+In the initial phase of the project, we stayed in regular and close contact to our customers to acquire a thorough understanding of the requirements and to formulate these initial requirements as the basic pillar for the design of the system. These requirements were continuously reassessed and refined over the course of the project.
 \\\\
-We agreed with our customers to split the system into a maximum of ten high-level functional requirements which will be refined by sub-requirements. This ensures that the requirements can be easily understood even by persons not familiar with the technicalities of the project. It also lays a foundation for the design of the software.
+We agreed with our customers to split the system into a maximum of ten high-level functional requirements which are refined by sub-requirements. This ensures that the requirements can be easily understood even by persons not familiar with the technicalities of the project. It also lays a foundation for the design of the software.
 \\\\
-The requirements can be found and will be updated and refined in the technical documentation of this project.
+The requirements can be found in the technical documentation of this project.
 
 \subsection{Design}\label{sec:design}
 
-The software design and architecture will be based on the requirements, as described in the previous section. Like the requirements, the design will be reassessed and refined throughout the project. While the requirements are to be negotiated closely coordinated with the customers, most of the software design and architecture within the given software environment are up to us. The boundaries that are set by the existing software environment are:
+The software design and architecture is based on the requirements, as described in the previous section. Like the requirements, the design was reassessed and refined throughout the project. While the requirements were negotiated and closely coordinated with the customers, most of the software design and architecture within the given software environment were up to us. The boundaries that are set by the existing software environment are:
 
 \begin{itemize}
 	\item The VRGP implementation for the Åboat runs as a microservice or a set of microservices within a microservice architecture.
@@ -29,9 +29,9 @@ The software design and architecture will be based on the requirements, as descr
 
 \subsection{Implementation}\label{sec:implementation}
 
-Following the initial design phase and based on the software design and architecture, we will begin implementing the actual system. It will probably mostly be implementation challenges and realisation during this phase, that make reassessment of the existing requirements and design necessary.
+Following the initial design phase and based on the software design and architecture, we began implementing the actual system.
 \\\\
-As there are already systems present on the Åboat that we need to interface with, we have an initial technology stack already in place, which we have to build upon. This consists of the following technologies already present:
+As there are already systems present on the Åboat that we needed to interface with, we had an initial technology stack already in place, which we had to build upon. This consists of the following technologies already present:
 
 \begin{itemize}
 	\item OpenDLV (main framework for communication between microservices)
@@ -41,16 +41,16 @@ As there are already systems present on the Åboat that we need to interface wit
 \end{itemize}
 
 \noindent
-We might need or want to use additional technologies to facilitate our implementation, to test the existing and new code, to integrate on the already existing system, or to communicate with other systems already in place. These might include tools like:
+Additional tools and technologies were needed through the project, to test, implement or otherwise help with the codebase. These included tools like:
 
 \begin{itemize}
-	\item Zabbix (for monitoring)
+	\item JenkinsCI (for building and monitoring)
 	\item Postman (for API testing and interaction)
 	\item Additional languages for easier prototyping (Python)
 \end{itemize}
 
 \noindent
-The implementation of the system can be split into the following major tasks, which might be extended over the course of the project:
+The implementation of the system can be split into the following major tasks, which were extended over the course of the project:
 
 \begin{itemize}
 	\item Developing the software in an independent container capable of interacting with the other parts of the system.
@@ -61,9 +61,9 @@ The implementation of the system can be split into the following major tasks, wh
 
 \subsection{Quality assurance}\label{sec:quality}
 
-Over the course of the project, beginning with the initial requirements analysis phase, we will have quality assurance measures in place to ensure a safe and high-quality software product. An important part of this process will be the regular meetings with our customers as well as peer and team reviews within our project team.
+Over the course of the project, beginning with the initial requirements analysis phase, we had quality assurance measures in place to ensure a safe and high-quality software product. An important part of this process was the regular meetings with our customers as well as peer and team reviews within our project team.
 \\\\
-With the beginning of the implementation phase, we will conduct software quality checks with every feature added or piece of code changed. This includes:
+With the beginning of the implementation phase, we conducted software quality checks with every feature added or piece of code changed. This includes:
 
 \begin{itemize}
 	\item Continuous testing and integration
@@ -73,9 +73,9 @@ With the beginning of the implementation phase, we will conduct software quality
 \end{itemize}
 
 \noindent
-This way there will be a continuous tracking of the product quality. Throughout the project, we will also make sure that the features which are being developed respect the requirements agreed upon with the customers. If any requirements change, we will adapt the software accordingly.
+This way there was a continuous tracking of the product quality. Throughout the project, we also made sure that the features which are being developed respect the requirements agreed upon with the customers. If any requirements changed, we adapted the software accordingly.
 \\\\
-Following the prototyping phase of the project, we will also use monitoring tools to ensure the proper functioning of both the server and the client-side software.
+Following the prototyping phase of the project, we also used monitoring tools to ensure the proper functioning of both the server and the client-side software.
 
 \section{Tasks, milestones and schedule}\label{sec:schedule}
 
