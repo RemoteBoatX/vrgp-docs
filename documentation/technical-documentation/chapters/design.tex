@@ -91,3 +91,31 @@ This high-level activity diagram (figure \ref{fig:activity-diagram}) provides an
 	\caption{Activity diagram}
 	\label{fig:activity-diagram}
 \end{figure}
+
+\subsection{User Interface Design}\label{sec:ui-design}
+
+\subsubsection{Vessel List View}
+
+A MOC can manage arbitrarily many vessel connections at the same time. Therefore, the starting view of the MOC frontend displays a list of all connected vessels including the name, the current latency and the MMSI of the vessel (see \ref{fig:gui-overview}). For each vessel, a detailed view can be accessed by clicking the respective row of the table.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{images/gui-overview}
+	\caption{Vessel list view}
+	\label{fig:gui-overview}
+\end{figure}
+
+\subsubsection{Single Vessel View}
+
+The detailed view for each vessel contains all static and dynamic information of that vessel as well as several possible interactions (see \ref{fig:gui-vessel}).
+The view is split into static vessel information at the top of the page and dynamic information as well as possible interactions in the bottom. The "Terminate" button is placed in the top right corner as is standard for closing buttons.
+The "Vessel information" tile is placed at the top of the page to make it easily available when entering the detail view.
+In the "Information streams" tile, the sensor data as well as the corresponding "Request" buttons are grouped to have all dynamic information in one place. To the right, it is possible to directly react to events on the vessel by typing and sending a guidance message.
+At the top left of the page, the name of the vessel is displayed and in the top right, there is a button to terminate the connection between the MOC and the vessel.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{images/gui-vessel}
+\caption{Single vessel view}
+\label{fig:gui-vessel}
+\end{figure}
