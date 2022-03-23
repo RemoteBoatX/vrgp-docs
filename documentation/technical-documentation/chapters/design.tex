@@ -15,7 +15,7 @@ The purpose of the VRGP implementation is to create an independent system implem
 \\\\
 Using the VRGP service with other boats would then be easy, as the only component that would have to be rewritten would be the \textbf{adapter}, which, as mentioned above, is only a small layer that interfaces between the vessel and VRGP service.
 \\\\
-On the shore-side, there is the MOC service, which consists of a backend and frontend. The backend is responsible for the communication with the vessel-side (more specifically, the VRGP service), while the frontend is responsible for displaying the information to (most likely) human operators.
+On the shore-side, there is the MOC service, which consists of a backend and potentially multiple frontends attached to it. The backend is responsible for the communication with the vessel-side (more specifically, the VRGP service), while the frontend is responsible for displaying the information to (most likely) human operators.
 \\\\
 An image of the current architecture of the VRGP implementation can be seen below.
 
