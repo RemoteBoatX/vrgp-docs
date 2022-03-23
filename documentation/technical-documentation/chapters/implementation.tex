@@ -46,6 +46,15 @@ In the following sections, every component will be explained in more detail. The
 The VRGP service is the main component of the software stack. It is the implementation of the VRGP specification. The service is meant to be independent and universal. This means that with a small interface (called an adapter), every vessel should be able to run it, anywhere.
 \\\\
 The VRGP service is responsible for the communication between the vessel (which is represented in the software stack as the adapter), and the MOC, running on the shore-side.
+\\\\
+The VRGP service class diagram is shown in figure \ref{fig:vrgp-service-class-diagram}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{diagrams/vrgp_class_diagram}
+	\caption{VRGP service class diagram}
+    \label{fig:vrgp-service-class-diagram}
+\end{figure}
 
 \subsection{MOC backend}
 
